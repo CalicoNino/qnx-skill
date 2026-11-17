@@ -1,0 +1,11 @@
+{
+  "name": "qnx-skill",
+  "owner": { "name": "CalicoNino" },
+  "plugins": [
+    {
+      "name": "qnx",
+      "source": "./",
+      "description": "Version-accurate QNX OS 8.0 expertise for Claude Code."
+    }
+  ]
+}

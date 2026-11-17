@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1020"/>
+      <stop offset="1" stop-color="#121a33"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#38bdf8" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#38bdf8" stop-opacity="0"/>
+    </radialGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#7dd3fc"/>
+    </marker>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0 L0 0 0 40" fill="none" stroke="#1e2a4a" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1280" height="640" fill="url(#bg)"/>
+  <rect width="1280" height="640" fill="url(#grid)" opacity="0.6"/>
+
+  <!-- Left: title block -->
+  <g font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <text x="88" y="208" font-size="26" font-weight="600" fill="#7dd3fc" letter-spacing="4">AGENT SKILL · QNX OS 8.0</text>
+    <text x="84" y="300" font-size="96" font-weight="800" fill="#f8fafc" letter-spacing="-2">qnx-skill</text>
+    <text x="88" y="360" font-size="30" font-weight="400" fill="#cbd5e1">Version-accurate QNX 8.0 expertise</text>
+    <text x="88" y="400" font-size="30" font-weight="400" fill="#cbd5e1">for Claude Code &amp; Agent Skills</text>
+
+    <g font-size="20" font-weight="600">
+      <rect x="88" y="446" rx="16" width="180" height="40" fill="#0f2a3d" stroke="#38bdf8" stroke-width="1.5"/>
+      <text x="178" y="472" text-anchor="middle" fill="#7dd3fc">microkernel IPC</text>
+      <rect x="282" y="446" rx="16" width="210" height="40" fill="#0f2a3d" stroke="#38bdf8" stroke-width="1.5"/>
+      <text x="387" y="472" text-anchor="middle" fill="#7dd3fc">resource managers</text>
+      <rect x="506" y="446" rx="16" width="130" height="40" fill="#0f2a3d" stroke="#38bdf8" stroke-width="1.5"/>
+      <text x="571" y="472" text-anchor="middle" fill="#7dd3fc">security</text>
+      <rect x="88" y="498" rx="16" width="120" height="40" fill="#2a1f0f" stroke="#f59e0b" stroke-width="1.5"/>
+      <text x="148" y="524" text-anchor="middle" fill="#fcd34d">QPLMS</text>
+      <rect x="222" y="498" rx="16" width="150" height="40" fill="#2a1f0f" stroke="#f59e0b" stroke-width="1.5"/>
+      <text x="297" y="524" text-anchor="middle" fill="#fcd34d">tracelogger</text>
+      <rect x="386" y="498" rx="16" width="230" height="40" fill="#2a1f0f" stroke="#f59e0b" stroke-width="1.5"/>
+      <text x="501" y="524" text-anchor="middle" fill="#fcd34d">Raspberry Pi 4 / 5</text>
+    </g>
+  </g>
+
+  <!-- Right: microkernel diagram -->
+  <g font-family="'JetBrains Mono', 'SFMono-Regular', Menlo, Consolas, monospace">
+    <circle cx="960" cy="330" r="190" fill="url(#glow)"/>
+
+    <!-- spokes -->
+    <g stroke="#7dd3fc" stroke-width="2.5" fill="none" marker-end="url(#arrow)" marker-start="url(#arrow)" opacity="0.9">
+      <line x1="960" y1="270" x2="960" y2="178"/>
+      <line x1="905" y1="300" x2="808" y2="238"/>
+      <line x1="1015" y1="300" x2="1112" y2="238"/>
+      <line x1="905" y1="362" x2="808" y2="424"/>
+      <line x1="1015" y1="362" x2="1112" y2="424"/>
+      <line x1="960" y1="392" x2="960" y2="484"/>
+    </g>
+
+    <!-- kernel -->
+    <circle cx="960" cy="331" r="62" fill="#0b1020" stroke="#38bdf8" stroke-width="3"/>
+    <text x="960" y="326" text-anchor="middle" font-size="19" font-weight="700" fill="#f8fafc">procnto</text>
+    <text x="960" y="350" text-anchor="middle" font-size="13" fill="#7dd3fc">microkernel</text>
+
+    <!-- user-space processes -->
+    <g font-size="17" font-weight="600">
+      <rect x="890" y="128" width="140" height="48" rx="10" fill="#111a33" stroke="#334155" stroke-width="2"/>
+      <text x="960" y="158" text-anchor="middle" fill="#e2e8f0">io-sock</text>
+
+      <rect x="700" y="196" width="140" height="48" rx="10" fill="#111a33" stroke="#334155" stroke-width="2"/>
+      <text x="770" y="226" text-anchor="middle" fill="#e2e8f0">devb-sdmmc</text>
+
+      <rect x="1080" y="196" width="140" height="48" rx="10" fill="#111a33" stroke="#334155" stroke-width="2"/>
+      <text x="1150" y="226" text-anchor="middle" fill="#e2e8f0">slogger2</text>
+
+      <rect x="700" y="418" width="140" height="48" rx="10" fill="#111a33" stroke="#334155" stroke-width="2"/>
+      <text x="770" y="448" text-anchor="middle" fill="#e2e8f0">i2c / spi</text>
+
+      <rect x="1080" y="418" width="140" height="48" rx="10" fill="#111a33" stroke="#334155" stroke-width="2"/>
+      <text x="1150" y="448" text-anchor="middle" fill="#e2e8f0">your app</text>
+
+      <!-- crashed + restarted driver -->
+      <rect x="880" y="486" width="160" height="48" rx="10" fill="#2a1f0f" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6 4"/>
+      <text x="960" y="516" text-anchor="middle" fill="#fcd34d">/dev/imu ↻</text>
+    </g>
+    <text x="960" y="566" text-anchor="middle" font-size="15" fill="#94a3b8">crashed driver restarted · kernel untouched</text>
+    <text x="960" y="100" text-anchor="middle" font-size="15" fill="#94a3b8">MsgSend → MsgReceive → MsgReply</text>
+  </g>
+</svg>

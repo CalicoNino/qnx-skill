@@ -1,0 +1,10 @@
+{
+  "name": "qnx",
+  "version": "0.1.0",
+  "description": "Version-accurate QNX OS 8.0 (SDP 8.0) expertise: microkernel architecture, message passing, resource managers, scheduling, security (secpol, pathtrust, QTD), QPLMS, tracing, qcc toolchain, QNX Toolkit for VS Code, and Raspberry Pi setup.",
+  "author": { "name": "CalicoNino" },
+  "homepage": "https://github.com/CalicoNino/qnx-skill",
+  "repository": "https://github.com/CalicoNino/qnx-skill",
+  "license": "MIT",
+  "keywords": ["qnx", "neutrino", "rtos", "embedded", "raspberry-pi", "real-time"]
+}
